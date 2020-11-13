@@ -206,7 +206,7 @@ For more details on [Reporters](#reporters) and writing your own [External Repor
 
 - `--disable-unicode`<br />
   Specify whether or not to force the unicode disable option. When supplied, all symbols in the output will be replaced
-  by their plain text equivalents.
+  by their plain text (ASCII) equivalents.
 
 - `--global-var "<global-variable-name>=<global-variable-value>"`<br />
   Allows the specification of global variables via the command line, in a key=value format. Multiple CLI global variables
@@ -296,6 +296,7 @@ return of the `newman.run` function is a run instance, which emits run events th
 | options.reporters         | Specify one reporter name as `string` or provide more than one reporter name as an `array`.<br /><br />Available reporters: `cli`, `json`, `junit`, `progress` and `emojitrain`.<br /><br />_Optional_<br />Type: `string\|array` |
 | options.reporter          | Specify options for the reporter(s) declared in `options.reporters`. <br /> e.g. `reporter : { junit : { export : './xmlResults.xml' } }` <br /> e.g. `reporter : { html : { export : './htmlResults.html', template: './customTemplate.hbs' } }` <br /><br />_Optional_<br />Type: `object` |
 | options.color             | Enable or Disable colored CLI output.<br/><br/>Available options: `on`, `off` and `auto`<br /><br />_Optional_<br />Type: `string`, Default value: `auto` |
+| options.disableUnicode    | Specify whether or not to force the unicode disable option. When supplied, all symbols in the output will be replaced by their plain text (ASCII) equivalents.<br /><br />_Optional_<br />Type: `boolean`, Default value: `false` |
 | options.sslClientCert     | The path to the public client certificate file.<br /><br />_Optional_<br />Type: `string` |
 | options.sslClientKey      | The path to the private client key file.<br /><br />_Optional_<br />Type: `string` |
 | options.sslClientPassphrase | The secret client key passphrase.<br /><br />_Optional_<br />Type: `string` |
